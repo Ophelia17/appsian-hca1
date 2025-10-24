@@ -59,10 +59,12 @@ export default defineConfig({
       url: 'http://localhost:5173',
       reuseExistingServer: !process.env.CI,
     },
-    {
-      command: 'cd ../../backend && dotnet run',
-      url: 'http://localhost:5187',
-      reuseExistingServer: !process.env.CI,
-    },
+    // Backend server - assume it's already running
+    // If you need to start it automatically, uncomment the lines below:
+    // {
+    //   command: 'cd ../../backend && /Users/saramann/.dotnet/dotnet run --project src/TaskApi/TaskApi.csproj --urls "http://localhost:5187"',
+    //   url: 'http://localhost:5187',
+    //   reuseExistingServer: !process.env.CI,
+    // },
   ],
 });
