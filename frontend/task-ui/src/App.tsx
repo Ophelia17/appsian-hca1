@@ -1,13 +1,18 @@
-import React from 'react';
+import { StrictMode } from 'react';
 import Navbar from './components/Navbar';
 import TaskApp from './pages/TaskApp';
+import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <Navbar />
-      <TaskApp />
-    </div>
+    <StrictMode>
+      <div className="App">
+        <Navbar />
+        <div className="main-content">
+          <TaskApp />
+        </div>
+      </div>
+    </StrictMode>
   );
 }
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import { TaskFilter } from '../types';
+import type { TaskFilter } from '../types';
 
 interface FilterBarProps {
   currentFilter: TaskFilter;

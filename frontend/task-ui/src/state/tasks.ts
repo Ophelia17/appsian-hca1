@@ -1,4 +1,4 @@
-import { Task, TaskFilter } from '../types';
+import type { Task, TaskFilter } from '../types';
 
 export interface TasksState {
   tasks: Task[];

@@ -1,6 +1,7 @@
 import { useState, useEffect, useCallback } from 'react';
-import { Task, TaskFilter, CreateTaskRequest, UpdateTaskRequest } from '../types';
-import { TasksState, initialTasksState, filterTasks } from './tasks';
+import type { TaskFilter, CreateTaskRequest, UpdateTaskRequest } from '../types';
+import type { TasksState } from './tasks';
+import { initialTasksState, filterTasks } from './tasks';
 import { taskApi } from '../api/client';
 
 export const useTasks = () => {
