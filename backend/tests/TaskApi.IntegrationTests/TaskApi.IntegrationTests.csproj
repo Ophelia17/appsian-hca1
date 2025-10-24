@@ -22,4 +22,8 @@
     <Using Include="Xunit" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\TaskApi\TaskApi.csproj" />
+  </ItemGroup>
+
 </Project>
