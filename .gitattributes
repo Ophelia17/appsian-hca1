@@ -1,0 +1,21 @@
+# Auto detect text files and perform LF normalization
+* text=auto
+
+# C# files
+*.cs text diff=csharp
+
+# TypeScript/JavaScript files
+*.ts text diff=typescript
+*.tsx text diff=typescript
+*.js text diff=javascript
+*.jsx text diff=javascript
+
+# JSON files
+*.json text
+
+# Markdown files
+*.md text
+
+# YAML files
+*.yml text
+*.yaml text
