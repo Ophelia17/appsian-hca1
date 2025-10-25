@@ -1,15 +1,9 @@
 import '@testing-library/jest-dom';
 import { beforeAll, afterAll } from 'vitest';
 
-// Polyfill for URL constructor in jsdom environment
-if (typeof globalThis.URL === 'undefined') {
-  try {
-    // eslint-disable-next-line @typescript-eslint/no-require-imports
-    const { URL } = require('url');
-    globalThis.URL = URL;
-  } catch {
-    // URL polyfill not available, skip
-  }
+// Set up global polyfills
+if (typeof globalThis.global === 'undefined') {
+  globalThis.global = globalThis;
 }
 
 // Mock fetch if not available
