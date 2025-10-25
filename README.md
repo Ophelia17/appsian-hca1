@@ -167,12 +167,6 @@ appsian-hca/
 
 ## 🔧 Development
 
-### Code Standards
-- **C#**: Nullable enabled, TreatWarningsAsErrors, XML documentation
-- **TypeScript**: Strict mode, no `any` types, functional components
-- **Commits**: Conventional Commits format
-- **Formatting**: 2-space indentation, 100 character line limit
-
 ### Key Decisions
 1. **In-memory storage**: Simple, fast, suitable for HCA-1 requirements
 2. **Client-side filtering**: Snappy UX with server-side support
@@ -193,16 +187,6 @@ appsian-hca/
 - Implement proper error logging
 - Add monitoring and health checks
 - Configure HTTPS and security headers
-
-## 📝 Commit Convention
-
-This project follows [Conventional Commits](https://www.conventionalcommits.org/):
-
-- `feat:` - New features
-- `fix:` - Bug fixes
-- `test:` - Test additions/changes
-- `docs:` - Documentation updates
-- `chore:` - Maintenance tasks
 
 ## 🤝 Contributing
 
