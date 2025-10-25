@@ -16,7 +16,7 @@ const TaskForm: React.FC<TaskFormProps> = ({ onSubmit, loading }) => {
     try {
       await onSubmit({ description: description.trim() });
       setDescription('');
-    } catch (error) {
+    } catch {
       // Error handling is done in the parent component
     }
   };

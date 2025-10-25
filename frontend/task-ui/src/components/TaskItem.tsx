@@ -14,7 +14,7 @@ const TaskItem: React.FC<TaskItemProps> = ({ task, onToggle, onDelete, loading }
   const handleToggle = async () => {
     try {
       await onToggle(task.id);
-    } catch (error) {
+    } catch {
       // Error handling is done in the parent component
     }
   };
@@ -24,7 +24,7 @@ const TaskItem: React.FC<TaskItemProps> = ({ task, onToggle, onDelete, loading }
       try {
         setIsDeleting(true);
         await onDelete(task.id);
-      } catch (error) {
+      } catch {
         // Error handling is done in the parent component
       } finally {
         setIsDeleting(false);

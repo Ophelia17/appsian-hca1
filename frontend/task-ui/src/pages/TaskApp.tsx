@@ -48,7 +48,7 @@ const TaskApp: React.FC = () => {
         type: 'success',
         message: 'Task created successfully!',
       });
-    } catch (error) {
+    } catch {
       addToast({
         type: 'error',
         message: 'Failed to create task. Please try again.',
@@ -66,7 +66,7 @@ const TaskApp: React.FC = () => {
           message: `Task marked as ${!task.isCompleted ? 'completed' : 'active'}!`,
         });
       }
-    } catch (error) {
+    } catch {
       addToast({
         type: 'error',
         message: 'Failed to update task. Please try again.',
@@ -81,7 +81,7 @@ const TaskApp: React.FC = () => {
         type: 'success',
         message: 'Task deleted successfully!',
       });
-    } catch (error) {
+    } catch {
       addToast({
         type: 'error',
         message: 'Failed to delete task. Please try again.',
