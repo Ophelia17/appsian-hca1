@@ -57,7 +57,7 @@ export default defineConfig({
     {
       command: 'npm run dev',
       url: 'http://localhost:5173',
-      reuseExistingServer: !process.env.CI,
+      reuseExistingServer: true,
     },
     // Backend server - assume it's already running
     // If you need to start it automatically, uncomment the lines below:
