@@ -3,14 +3,24 @@ import { beforeAll, afterAll } from 'vitest';
 
 // Polyfill for URL constructor in jsdom environment
 if (typeof globalThis.URL === 'undefined') {
-  const { URL } = await import('url');
-  globalThis.URL = URL;
+  try {
+    // eslint-disable-next-line @typescript-eslint/no-require-imports
+    const { URL } = require('url');
+    globalThis.URL = URL;
+  } catch {
+    // URL polyfill not available, skip
+  }
 }
 
 // Mock fetch if not available
 if (typeof globalThis.fetch === 'undefined') {
-  const fetch = await import('node-fetch');
-  globalThis.fetch = fetch.default as typeof globalThis.fetch;
+  try {
+    // eslint-disable-next-line @typescript-eslint/no-require-imports
+    const fetch = require('node-fetch');
+    globalThis.fetch = fetch.default || fetch;
+  } catch {
+    // fetch polyfill not available, skip
+  }
 }
 
 // Suppress console errors during tests
