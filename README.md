@@ -25,8 +25,8 @@ dotnet restore
 dotnet run --project src/TaskApi/TaskApi.csproj
 ```
 
-- **API**: http://localhost:5187
-- **Swagger UI**: http://localhost:5187/swagger
+- **API**: http://localhost:5148
+- **Swagger UI**: http://localhost:5148/swagger
 
 ### Frontend (React)
 
@@ -39,7 +39,7 @@ npm run dev
 
 - **Frontend**: http://localhost:5173
 
-> ** Troubleshooting:** If the backend is running on a different port, you may need to update the `API_BASE_URL` in `frontend/task-ui/src/api/client.ts` to match your backend's actual port (e.g., if it's running on `http://localhost:5000` instead of `http://localhost:5187`).
+> ** Troubleshooting:** If the backend is running on a different port, you may need to update the `API_BASE_URL` in `frontend/task-ui/src/api/client.ts` to match your backend's actual port (default is `http://localhost:5148`).
 
 ## Architecture
 
@@ -208,7 +208,7 @@ appsian-hca/
    ```bash
    cd backend/src/TaskApi && dotnet run
    ```
-   Backend will be available at http://localhost:5187
+   Backend will be available at http://localhost:5148
 
 2. **Start frontend (in a new terminal):**
    ```bash
